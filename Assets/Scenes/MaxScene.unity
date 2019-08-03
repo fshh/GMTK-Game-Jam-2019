@@ -300,7 +300,7 @@ MonoBehaviour:
   levels:
   - enemyTypes:
     - Shielder
-    duration: 10
+    duration: 1
     totalNumberToSpawn: 1
 --- !u!4 &1094979596
 Transform:
