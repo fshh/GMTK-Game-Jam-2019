@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour, IKillable
 
     public GameObject Target { get; set; }
     public bool Visible => GetComponent<SpriteRenderer>().enabled;
-    private bool Attacking => weapon != null;
+    protected virtual bool Attacking => weapon != null;
 
     protected EnemyWeapon weapon;
 
@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour, IKillable
         if (Attacking)
         {
             AttackMovement();
-            weapon.MoveWeapon();
+            weapon?.MoveWeapon();
         }
         else
         {
