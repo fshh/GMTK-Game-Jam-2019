@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public string type = "Default";
     [SerializeField] protected float speed = 4f;
 
     public GameObject Target { get; set; }
-    public virtual string Name => "Default";
     public bool Visible => GetComponent<SpriteRenderer>().enabled;
 
     private Rigidbody2D rb;
