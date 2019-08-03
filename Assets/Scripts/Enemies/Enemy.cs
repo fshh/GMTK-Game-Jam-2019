@@ -7,9 +7,14 @@ public class Enemy : MonoBehaviour, IKillable
     [SerializeField] protected float speed = 4f;
     [SerializeField] [Range(0f, 1f)] protected float deathShake = 0.2f;
     [SerializeField] [Range(0f, 1f)] protected float hitStunDuration = 0.1f;
+    [SerializeField] protected float attackDistance = 1f;
+    [SerializeField] protected EnemyWeapon weaponPrefab;
 
     public GameObject Target { get; set; }
     public bool Visible => GetComponent<SpriteRenderer>().enabled;
+    private bool Attacking => weapon != null;
+
+    protected EnemyWeapon weapon;
 
     private Rigidbody2D rb;
     
@@ -20,17 +25,41 @@ public class Enemy : MonoBehaviour, IKillable
     {
         rb = GetComponent<Rigidbody2D>();
     }
+
+    protected virtual void Update()
+    {
+        if ((Vector3.Distance(transform.position, Target.transform.position) < attackDistance) && !Attacking)
+        {
+            Attack();
+        }
+    }
     
     /// <summary>
     /// Overload to change how movement behaves.
     /// </summary>
     protected virtual void FixedUpdate()
     {
+        if (Attacking)
+        {
+            AttackMovement();
+        }
+        NormalMovement();
+    }
+
+    protected virtual void Attack()
+    {
+        weapon = Instantiate<EnemyWeapon>(weaponPrefab, transform);
+    }
+
+    protected virtual void NormalMovement()
+    {
         Vector3 direction = GetDirection();
         rb.velocity = direction * speed;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rb.rotation = Quaternion.AngleAxis(angle - 90f, Vector3.forward).eulerAngles.z;
     }
+
+    protected virtual void AttackMovement() { }
 
     /// <summary>
     /// Determines the direction the enemy should go this fixed update. 
