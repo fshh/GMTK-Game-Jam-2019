@@ -13,11 +13,13 @@ public class Jokester : Enemy
     /// </summary>
     [SerializeField] private float farDistFromPlayer = 10f;
 
+    private Animator anim;
     private float baseSpeed = 0;
     private bool retreating = false;
 
     protected override void Start()
     {
+        anim = GetComponent<Animator>();
         base.Start();
         baseSpeed = speed;
     }
@@ -25,7 +27,10 @@ public class Jokester : Enemy
     protected override Vector3 GetDirection()
     {
         if (!Target) {
+            anim.SetBool("Running", false);
             return Vector3.zero;
+        } else {
+            anim.SetBool("Running", true);
         }
 
         Vector3 direction = base.GetDirection();

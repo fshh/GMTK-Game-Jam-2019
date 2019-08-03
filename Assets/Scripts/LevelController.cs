@@ -26,23 +26,25 @@ public class LevelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        levelTimeElapsed += Time.deltaTime;
-        spawnTimeElapsed += Time.deltaTime;
+        if (!PlayerController.IsDead()) {
+            levelTimeElapsed += Time.deltaTime;
+            spawnTimeElapsed += Time.deltaTime;
 
-        if (currentLevel >= levels.Count) {
-            // TODO: endgame behavior
-            return;
-        }
+            if (currentLevel >= levels.Count) {
+                // TODO: endgame behavior
+                return;
+            }
 
-        if (spawnTimeElapsed >= levels[currentLevel].duration / levels[currentLevel].totalNumberToSpawn) {
-            SpawnRandomFromCurrentLevel();
-            spawnTimeElapsed = 0f;
-        }
+            if (spawnTimeElapsed >= levels[currentLevel].duration / levels[currentLevel].totalNumberToSpawn) {
+                SpawnRandomFromCurrentLevel();
+                spawnTimeElapsed = 0f;
+            }
 
-        if (levelTimeElapsed >= levels[currentLevel].duration) {
-            currentLevel++;
-            levelTimeElapsed = 0f;
-            spawnTimeElapsed = 0f;
+            if (levelTimeElapsed >= levels[currentLevel].duration) {
+                currentLevel++;
+                levelTimeElapsed = 0f;
+                spawnTimeElapsed = 0f;
+            }
         }
     }
 
