@@ -28,6 +28,9 @@ public class Enemy : MonoBehaviour, IKillable
 
     protected virtual void Update()
     {
+        if (!Target)
+            return;
+
         if ((Vector3.Distance(transform.position, Target.transform.position) < attackDistance) && !Attacking)
         {
             Attack();
