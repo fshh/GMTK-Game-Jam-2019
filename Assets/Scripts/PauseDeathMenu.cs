@@ -13,7 +13,7 @@ public class PauseDeathMenu : MonoBehaviour
 
     void Update()
     {
-        if (PlayerController.IsDead())
+        if (PlayerController.IsDead() && !deathMenu.activeInHierarchy)
         {
             deathMenu.SetActive(true);
             GameObject scoreBoard = GameObject.FindGameObjectWithTag("Score Board");
@@ -37,7 +37,7 @@ public class PauseDeathMenu : MonoBehaviour
         {
             if (Input.GetButtonDown("Pause"))
             {
-                pauseMenu.SetActive(true);
+                pauseMenu.SetActive(false);
                 Time.timeScale = 1f;
                 yield break;
             }
