@@ -18,6 +18,7 @@ public class WeaponController : MonoBehaviour
         IKillable hitObject = collision.GetComponent<IKillable>();
         if (hitObject != null)
         {
+            Debug.Log(hitObject);
             hitObject.OnHit();
         }
     }

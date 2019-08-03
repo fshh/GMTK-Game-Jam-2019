@@ -1,11 +1,12 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour, IKillable
 {
     public string type = "Default";
     [SerializeField] protected float speed = 4f;
+    [SerializeField] [Range(0f, 1f)] protected float deathShake = 0.2f;
+    [SerializeField] [Range(0f, 1f)] protected float hitStunDuration = 0.1f;
 
     public GameObject Target { get; set; }
     public bool Visible => GetComponent<SpriteRenderer>().enabled;
@@ -44,8 +45,17 @@ public class Enemy : MonoBehaviour, IKillable
         GetComponent<SpriteRenderer>().enabled = visible;
     }
 
-    public void OnHit()
+    public virtual void OnHit() 
     {
+        CameraController cam = Camera.main.GetComponent<CameraController>();
+        cam.InduceStress(0.2f);
+        StartCoroutine(HitStun());
+    }
+
+    private IEnumerator HitStun() {
+        Time.timeScale = 0.1f;
+        yield return new WaitForSecondsRealtime(hitStunDuration);
+        Time.timeScale = 1f;
         Destroy(this.gameObject);
     }
 }
