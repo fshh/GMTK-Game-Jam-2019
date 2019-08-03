@@ -77,6 +77,7 @@ public class EnemyController : MonoBehaviour
 
     public void RemoveEnemy(Enemy enemy) {
         enemies.Remove(enemy);
+        GameObject.FindGameObjectWithTag("Score Board").GetComponent<ScoreBoard>().Score += 1;
         Destroy(enemy.gameObject);
     }
 }
