@@ -1,17 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyWeapon : WeaponController
+public class EnemyWeapon : MonoBehaviour
 {
     [SerializeField] protected float lifetime = 1f;
 
     protected float timeAlive = 0f;
 
-    protected override void HitObject(Collider2D collider)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collider.tag == "Player")
+        if (collision.tag == "Player")
         {
-            base.HitObject(collider);
+            collision.GetComponent<IKillable>().OnHit();
         }
     }
 

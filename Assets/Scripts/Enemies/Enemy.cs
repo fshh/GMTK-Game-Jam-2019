@@ -42,8 +42,12 @@ public class Enemy : MonoBehaviour, IKillable
         if (Attacking)
         {
             AttackMovement();
+            weapon.MoveWeapon();
         }
-        NormalMovement();
+        else
+        {
+            NormalMovement();
+        }
     }
 
     protected virtual void Attack()
@@ -59,7 +63,10 @@ public class Enemy : MonoBehaviour, IKillable
         rb.rotation = Quaternion.AngleAxis(angle - 90f, Vector3.forward).eulerAngles.z;
     }
 
-    protected virtual void AttackMovement() { }
+    protected virtual void AttackMovement()
+    {
+        rb.velocity = Vector2.zero;
+    }
 
     /// <summary>
     /// Determines the direction the enemy should go this fixed update. 

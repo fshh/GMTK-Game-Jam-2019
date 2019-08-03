@@ -69,6 +69,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: Default
   speed: 4
+  deathShake: 0.2
+  hitStunDuration: 0.1
+  attackDistance: 3
+  weaponPrefab: {fileID: 1631918701253469580, guid: 147742b7a20097941a2c5c28c04bd9e0,
+    type: 3}
 --- !u!212 &-729864463117620198
 SpriteRenderer:
   m_ObjectHideFlags: 0

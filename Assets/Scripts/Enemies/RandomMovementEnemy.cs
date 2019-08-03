@@ -25,9 +25,9 @@ public class RandomMovementEnemy : Enemy
             float xDir = Random.Range(-1f, 1f);
             float yDir = Random.Range(-1f, 1f);
             float distToCenter = Vector2.Distance(transform.position, Vector2.zero);
-            currentDir = -transform.position.normalized + new Vector3(xDir, yDir) * (distanceFromCenterTrend / distToCenter);
+            currentDir = (-transform.position.normalized + new Vector3(xDir, yDir) * (distanceFromCenterTrend / distToCenter)).normalized;
             timeMoving = timeSpentUnchanged;
-            return currentDir.normalized;
+            return currentDir;
         }
         timeMoving -= Time.fixedDeltaTime;
         return currentDir;
