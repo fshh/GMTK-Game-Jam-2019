@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IKillable
 {
     public string type = "Default";
     [SerializeField] protected float speed = 4f;
@@ -42,5 +42,10 @@ public class Enemy : MonoBehaviour
     public virtual void SetVisibility(bool visible)
     {
         GetComponent<SpriteRenderer>().enabled = visible;
+    }
+
+    public void OnHit()
+    {
+        Destroy(this.gameObject);
     }
 }
