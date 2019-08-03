@@ -14,8 +14,7 @@ public class Magnet : MonoBehaviour
     {
         if (Input.GetMouseButton(0)) {
             target.velocity += (Vector2)(transform.position - target.transform.position).normalized * acceleration;
-            target.angularVelocity += target.velocity.magnitude;
-            //target.rotation += target.velocity.magnitude;
+            target.angularVelocity += Mathf.Sign(target.angularVelocity) * target.velocity.magnitude;
         }
 
         target.drag = drag;

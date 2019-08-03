@@ -24,6 +24,10 @@ public class Jokester : Enemy
 
     protected override Vector3 GetDirection()
     {
+        if (!Target) {
+            return Vector3.zero;
+        }
+
         Vector3 direction = base.GetDirection();
         float distToPlayer = Vector3.Distance(transform.position, Target.transform.position);
         retreating = (distToPlayer < closeDistFromPlayer) || (retreating && distToPlayer < farDistFromPlayer);

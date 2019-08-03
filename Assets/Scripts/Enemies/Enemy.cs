@@ -39,6 +39,9 @@ public class Enemy : MonoBehaviour, IKillable
     /// <returns>The direction the enemey should head.</returns>
     protected virtual Vector3 GetDirection()
     {
+        if (!Target) {
+            return Vector3.zero;
+        }
         return (Target.transform.position - transform.position).normalized;
     }
 
