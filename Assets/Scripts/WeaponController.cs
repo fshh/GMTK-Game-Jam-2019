@@ -28,6 +28,7 @@ public class WeaponController : MonoBehaviour
         IKillable hitObject = collider.GetComponent<IKillable>();
         if (hitObject != null && rb.velocity.magnitude > speedToKill)
         {
+            Debug.Log(hitObject);
             hitObject.OnHit();
         }
     }

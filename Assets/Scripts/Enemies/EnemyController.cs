@@ -68,4 +68,9 @@ public class EnemyController : MonoBehaviour
         int spawnIndex = Random.Range(0, spawns.Length);
         SpawnEnemy(name, spawnIndex);
     }
+
+    public void RemoveEnemy(Enemy enemy) {
+        enemies.Remove(enemy);
+        Destroy(enemy.gameObject);
+    }
 }
