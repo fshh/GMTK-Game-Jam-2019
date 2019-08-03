@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
-    [SerializeField] private float speedToKill;
+    [SerializeField] protected float speedToKill;
 
     private Rigidbody2D rb;
 
@@ -23,7 +23,7 @@ public class WeaponController : MonoBehaviour
         HitObject(collision);
     }
 
-    private void HitObject(Collider2D collider)
+    protected virtual void HitObject(Collider2D collider)
     {
         IKillable hitObject = collider.GetComponent<IKillable>();
         if (hitObject != null && rb.velocity.magnitude > speedToKill)
