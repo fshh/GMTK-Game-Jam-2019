@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
     // Following player and weapon
     [SerializeField] private Transform player;
     [SerializeField] private Transform weapon;
-    [SerializeField][Range(0f,1f)] private float playerPriority = 0.8f;
+    [SerializeField] [Range(0f,1f)] private float playerPriority = 0.8f;
     private Vector3 velocity = Vector3.zero;
 
     // Camera shake

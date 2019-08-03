@@ -8,12 +8,6 @@ public class Magnet : MonoBehaviour
     [SerializeField] [Range(0f, 1f)] private float acceleration = 0.8f;
     [SerializeField] [Range(0f, 3f)] private float drag = 0.1f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {

@@ -60,4 +60,9 @@ public class EnemyController : MonoBehaviour
         e.Target = player;
         enemies.Add(e);
     }
+
+    public void SpawnEnemy(string name) {
+        int spawnIndex = Random.Range(0, spawns.Length);
+        SpawnEnemy(name, spawnIndex);
+    }
 }
