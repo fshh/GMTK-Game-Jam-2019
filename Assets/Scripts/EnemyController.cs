@@ -58,5 +58,6 @@ public class EnemyController : MonoBehaviour
     {
         Enemy e = GameObject.Instantiate(enemyPrefabs[name], spawns[spawnIndex].transform.position, Quaternion.identity);
         e.Target = player;
+        enemies.Add(e);
     }
 }
