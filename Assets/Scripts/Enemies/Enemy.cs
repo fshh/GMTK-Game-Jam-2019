@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour, IKillable
     {
         if ((Vector3.Distance(transform.position, Target.transform.position) < attackDistance) && !Attacking)
         {
-            Attack()
+            Attack();
         }
     }
     
