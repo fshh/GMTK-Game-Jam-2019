@@ -16,6 +16,9 @@ MonoBehaviour:
   speed: 3
   deathShake: 0.2
   hitStunDuration: 0.1
+  attackDistance: 1
+  weaponPrefab: {fileID: 2148461124265104788, guid: 9e766712eacea4147bb337dfb00c2d72,
+    type: 3}
   retreatSpeed: 5
   closeDistFromPlayer: 3
   farDistFromPlayer: 10

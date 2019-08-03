@@ -176,6 +176,12 @@ PrefabInstance:
       propertyPath: speed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6364744695164318921, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: weaponPrefab
+      value: 
+      objectReference: {fileID: 1413899727343140995, guid: ca3be0c9b4b358348b5b833a4eaade2a,
+        type: 3}
     - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
         type: 3}
       propertyPath: m_Color.r

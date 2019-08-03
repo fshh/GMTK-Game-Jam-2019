@@ -299,7 +299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - enemyTypes:
-    - Default
+    - Shielder
     duration: 1
     totalNumberToSpawn: 1
 --- !u!4 &1094979596
