@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour
     
     void Start()
     {
-        enemyPrefabs = Resources.LoadAll<Enemy>("Prefabs/Enemies").ToDictionary(x => x.Name);
+        enemyPrefabs = Resources.LoadAll<Enemy>("Prefabs/Enemies").ToDictionary(x => x.type);
         spawns = GameObject.FindGameObjectsWithTag("Enemy Spawn");
     }
     
