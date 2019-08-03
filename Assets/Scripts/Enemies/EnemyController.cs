@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class EnemyController : MonoBehaviour
     
     void Update()
     {
+        if (!player) {
+            GameObject.FindGameObjectWithTag("Spotlight Mask").GetComponent<Image>().enabled = false;
+            return;
+        }
+
         if (timeFlashed <= 0f)
         {
             Enemy closestEnemy = null;

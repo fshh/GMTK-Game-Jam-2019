@@ -9,6 +9,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Transform weapon;
     [SerializeField] [Range(0f,1f)] private float playerPriority = 0.8f;
     private Vector3 velocity = Vector3.zero;
+    private Vector3 targetPoint = Vector3.zero;
 
     // Camera shake
     [SerializeField] Vector3 maximumTranslationShake = Vector3.one;
@@ -30,10 +31,14 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Follow player and weapon
-        Vector3 targetPoint = weapon.position + (player.position - weapon.position) * playerPriority;
-        targetPoint.z = transform.position.z;
-        transform.position = Vector3.SmoothDamp(transform.position, targetPoint, ref velocity, 0.1f);
+        if (player != null && weapon != null) {
+            // Follow player and weapon
+            targetPoint = weapon.position + (player.position - weapon.position) * playerPriority;
+            targetPoint.z = transform.position.z;
+            transform.position = Vector3.SmoothDamp(transform.position, targetPoint, ref velocity, 0.1f);
+        } else {
+            transform.position = Vector3.SmoothDamp(transform.position, targetPoint, ref velocity, 0.1f);
+        }
 
         // Apply camera shake
         float shake = Mathf.Pow(trauma, traumaExponent);

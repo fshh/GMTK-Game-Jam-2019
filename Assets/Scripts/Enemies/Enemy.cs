@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour, IKillable
     public virtual void OnHit() 
     {
         CameraController cam = Camera.main.GetComponent<CameraController>();
-        cam.InduceStress(0.2f);
+        cam.InduceStress(deathShake);
         StartCoroutine(HitStun());
     }
 
