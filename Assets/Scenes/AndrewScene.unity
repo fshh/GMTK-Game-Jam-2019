@@ -431,6 +431,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 487829457, guid: f95f5bb472dd96d41b3ac4d6fabb5166, type: 3}
+      propertyPath: m_Time
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 949371778, guid: f95f5bb472dd96d41b3ac4d6fabb5166, type: 3}
+      propertyPath: m_Time
+      value: 0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f95f5bb472dd96d41b3ac4d6fabb5166, type: 3}
 --- !u!1 &494727099 stripped
@@ -1052,8 +1060,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -12
-  m_Sprite: {fileID: 21300000, guid: 2320de099efbea24a961bd4b9950a668, type: 3}
-  m_Color: {r: 0.2619802, g: 0.051287122, b: 0.28, a: 1}
+  m_Sprite: {fileID: 21300000, guid: c762a8ac5bb1e634dbd4e13bab8ca9cb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -1182,11 +1190,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - enemyTypes:
+    - Boomer
+    duration: 10
+    totalNumberToSpawn: 8
+  - enemyTypes:
+    - Jokester
+    duration: 10
+    totalNumberToSpawn: 5
+  - enemyTypes:
     - Roamer
     - Jokester
+    duration: 20
+    totalNumberToSpawn: 15
+  - enemyTypes:
     - Shielder
-    duration: 30
-    totalNumberToSpawn: 30
+    duration: 15
+    totalNumberToSpawn: 6
+  - enemyTypes:
+    - Roamer
+    - Shielder
+    duration: 15
+    totalNumberToSpawn: 6
+  - enemyTypes:
+    - Shielder
+    duration: 15
+    totalNumberToSpawn: 6
+  - enemyTypes:
+    - Shielder
+    duration: 15
+    totalNumberToSpawn: 6
+  - enemyTypes:
+    - Shielder
+    duration: 15
+    totalNumberToSpawn: 6
 --- !u!4 &1726193559
 Transform:
   m_ObjectHideFlags: 0
@@ -1827,7 +1863,7 @@ Transform:
   m_GameObject: {fileID: 2027151740}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1763388902}
   m_RootOrder: 1
@@ -1870,7 +1906,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: b306b4e4fcb2c444ea6bc50fb98d9d6b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 93f42cee5360f6443a619f417dec3d6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

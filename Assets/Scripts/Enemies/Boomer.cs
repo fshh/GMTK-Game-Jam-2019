@@ -8,8 +8,23 @@ public class Boomer : Enemy
     [SerializeField] private float explosionForce = 10;
     [SerializeField] private float explosionRadius;
 
+    private Animator anim;
     private bool attacking = false;
     protected override bool Attacking => attacking;
+
+    protected override void Start() {
+        anim = GetComponent<Animator>();
+        base.Start();
+    }
+
+    protected override Vector3 GetDirection() {
+        if (!Target) {
+            anim.SetBool("Walking", false);
+        } else {
+            anim.SetBool("Walking", true);
+        }
+        return base.GetDirection();
+    }
 
     public override void OnHit()
     {

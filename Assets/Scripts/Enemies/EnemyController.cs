@@ -46,7 +46,7 @@ public class EnemyController : MonoBehaviour
                 }
             }
             //closestEnemy?.SetVisibility(true);
-            //spotlight.target = closestEnemy?.transform;
+            spotlight.target = closestEnemy?.transform;
         }
         else
         {
