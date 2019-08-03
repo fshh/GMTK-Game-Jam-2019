@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 57622946c3392274c917e5ef7b30c5b3
+guid: bb0c7887041a2be4a8deb0e63764330d
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,12 +8,12 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Pixellari
+  fontName: Pixel Millennium
   fontNames:
-  - Pixellari
+  - Pixel Millennium
   fallbackFontReferences: []
   customCharacters: 
-  fontRenderingMode: 0
+  fontRenderingMode: 2
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1

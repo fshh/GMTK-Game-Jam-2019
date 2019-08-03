@@ -19,15 +19,19 @@ public class Magnet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0)) {
-            particles.Play();
-            target.velocity += (Vector2)(transform.position - target.transform.position).normalized * acceleration;
-            target.angularVelocity += Mathf.Sign(target.angularVelocity) * target.velocity.magnitude;
+        if (!PlayerController.IsDead()) {
+            if (Input.GetMouseButton(0)) {
+                particles.Play();
+                target.velocity += (Vector2)(transform.position - target.transform.position).normalized * acceleration;
+                target.angularVelocity += Mathf.Sign(target.angularVelocity) * target.velocity.magnitude;
+            } else {
+                particles.Stop();
+            }
+
+            target.drag = drag;
+            target.angularDrag = angularDrag;
         } else {
             particles.Stop();
         }
-
-        target.drag = drag;
-        target.angularDrag = angularDrag;
     }
 }
