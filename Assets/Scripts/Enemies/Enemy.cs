@@ -53,9 +53,9 @@ public class Enemy : MonoBehaviour, IKillable
     }
 
     private IEnumerator HitStun() {
-        Time.timeScale = 0.1f;
+        Time.timeScale = 0.5f;
         yield return new WaitForSecondsRealtime(hitStunDuration);
         Time.timeScale = 1f;
-        Destroy(this.gameObject);
+        FindObjectOfType<EnemyController>().RemoveEnemy(this);
     }
 }

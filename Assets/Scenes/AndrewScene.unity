@@ -680,8 +680,8 @@ MonoBehaviour:
   levels:
   - enemyTypes:
     - RandomMover
-    duration: 10
-    totalNumberToSpawn: 3
+    duration: 30
+    totalNumberToSpawn: 30
 --- !u!4 &1726193559
 Transform:
   m_ObjectHideFlags: 0
