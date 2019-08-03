@@ -7,17 +7,18 @@ public class Magnet : MonoBehaviour
     [SerializeField] private Rigidbody2D target;
     [SerializeField] [Range(0f, 1f)] private float acceleration = 0.8f;
     [SerializeField] [Range(0f, 3f)] private float drag = 0.1f;
+    [SerializeField] [Range(0f, 3f)] private float angularDrag = 0.5f;
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButton(0)) {
-            //target.velocity = Vector2.Lerp(target.velocity, (transform.position - target.transform.position).normalized * topSpeed, acceleration);
             target.velocity += (Vector2)(transform.position - target.transform.position).normalized * acceleration;
+            target.angularVelocity += target.velocity.magnitude;
+            //target.rotation += target.velocity.magnitude;
         }
 
         target.drag = drag;
-        //target.velocity = Vector2.Lerp(target.velocity, Vector2.zero, deceleration);
-        //target.velocity -= target.velocity * deceleration;
+        target.angularDrag = angularDrag;
     }
 }
