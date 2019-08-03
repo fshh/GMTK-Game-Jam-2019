@@ -32,4 +32,9 @@ public class RandomMovementEnemy : Enemy
         timeMoving -= Time.fixedDeltaTime;
         return currentDir;
     }
+
+    protected override void Attack()
+    {
+        
+    }
 }

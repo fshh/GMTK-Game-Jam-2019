@@ -42,4 +42,12 @@ public class Jokester : Enemy
         }
         return direction;
     }
+
+    protected override void Attack()
+    {
+        Vector3 direction = base.GetDirection();
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        rb.rotation = Quaternion.AngleAxis(angle - 90f, Vector3.forward).eulerAngles.z;
+        base.Attack();
+    }
 }

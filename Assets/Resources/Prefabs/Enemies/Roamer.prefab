@@ -35,8 +35,23 @@ MonoBehaviour:
   speed: 4
   deathShake: 0.2
   hitStunDuration: 0.1
+  attackDistance: 0
+  weaponPrefab: {fileID: 6319668964731351613}
   distanceFromCenterTrend: 1
   timeSpentUnchanged: 2
+--- !u!114 &6319668964731351613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3280719985397430386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e3a2ae140d0e14e950a822c6d7bac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 0
 --- !u!1001 &1095794304362923434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44,27 +59,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -9080338791031898633, guid: 70093c1b86860914c8711eaa0a9d7aa1,
-        type: 3}
     - target: {fileID: 2500199749413617112, guid: 3f849da6b970b2b4db33ef8e58e40021,
         type: 3}
       propertyPath: m_Name
@@ -130,6 +124,27 @@ PrefabInstance:
       propertyPath: type
       value: RandomMover
       objectReference: {fileID: 0}
+    - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -9080338791031898633, guid: 70093c1b86860914c8711eaa0a9d7aa1,
+        type: 3}
     - target: {fileID: 1322189113256095673, guid: 3f849da6b970b2b4db33ef8e58e40021,
         type: 3}
       propertyPath: m_Size.x

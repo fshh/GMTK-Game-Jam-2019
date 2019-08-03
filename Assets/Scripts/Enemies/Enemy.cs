@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour, IKillable
 
     protected EnemyWeapon weapon;
 
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
     
     /// <summary>
     /// Use for initializations.
