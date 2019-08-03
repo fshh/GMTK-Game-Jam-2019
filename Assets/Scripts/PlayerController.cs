@@ -6,11 +6,16 @@ public class PlayerController : MonoBehaviour, IKillable
 {
     [SerializeField] [Range(0f, 1f)] protected float hitStunDuration = 1f;
 
+    private bool dead = false;
+
     public void OnHit()
     {
-        CameraController cam = Camera.main.GetComponent<CameraController>();
-        cam.InduceStress(0.5f);
-        StartCoroutine(HitStun());
+        if (!dead) {
+            dead = true;
+            CameraController cam = Camera.main.GetComponent<CameraController>();
+            cam.InduceStress(0.5f);
+            StartCoroutine(HitStun());
+        }
     }
 
     private IEnumerator HitStun() {
