@@ -11,11 +11,13 @@ public class EnemyController : MonoBehaviour
     private Dictionary<string, Enemy> enemyPrefabs;
     private GameObject[] spawns;
     private float timeFlashed = 0f;
+    private SmoothFollowObject spotlight;
     
     void Start()
     {
         enemyPrefabs = Resources.LoadAll<Enemy>("Prefabs/Enemies").ToDictionary(x => x.type);
         spawns = GameObject.FindGameObjectsWithTag("Enemy Spawn");
+        spotlight = GameObject.FindGameObjectWithTag("Enemy Spotlight").GetComponent<SmoothFollowObject>();
     }
     
     void Update()
@@ -34,10 +36,11 @@ public class EnemyController : MonoBehaviour
                 }
                 if (enemy.Visible)
                 {
-                    enemy.SetVisibility(false);
+                    //enemy.SetVisibility(false);
                 }
             }
-            closestEnemy?.SetVisibility(true);
+            //closestEnemy?.SetVisibility(true);
+            spotlight.target = closestEnemy?.transform;
         }
         else
         {
