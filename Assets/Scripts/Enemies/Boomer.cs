@@ -52,6 +52,7 @@ public class Boomer : Enemy
         yield return new WaitForSeconds(fuse);
 
         Instantiate(explosion, transform.position, Quaternion.identity);
+        AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("Sounds/Boom"), transform.position, 3f);
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
         foreach (Collider2D collider in colliders)
         {
