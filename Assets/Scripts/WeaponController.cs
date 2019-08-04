@@ -9,12 +9,12 @@ public class WeaponController : MonoBehaviour
     [SerializeField] protected GameObject playerBloodSpray;
 
     protected Rigidbody2D rb;
-    protected AudioSource audio;
+    protected AudioSource audioSource;
 
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        audio = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -31,22 +31,20 @@ public class WeaponController : MonoBehaviour
     {
         IKillable hitObject = collider.GetComponent<IKillable>();
         
-        if (hitObject is Enemy)
-        {
-            audio.clip = Resources.Load<AudioClip>("Sounds/Hit" + Random.Range(1, 9));
-            audio.Play();
-        }
-        else if (!(hitObject is PlayerController))
+        if (hitObject == null)
         {
             AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("Sounds/ShieldHit" + Random.Range(1, 6)), transform.position);
         }
 
         if (hitObject != null && Mathf.Max(rb.velocity.magnitude, rb.angularVelocity) > speedToKill)
         {
-            if (hitObject.GetType() == typeof(Enemy) || hitObject.GetType().IsSubclassOf(typeof(Enemy))) {
+            if (hitObject is Enemy) {
                 SprayBlood(collider, enemyBloodSpray);
-            } else if (collider.tag == "Player") {
+                audioSource.clip = Resources.Load<AudioClip>("Sounds/Hit" + Random.Range(1, 9));
+                audioSource.Play();
+            } else if (hitObject is PlayerController) {
                 SprayBlood(collider, playerBloodSpray);
+                audioSource.clip = Resources.Load<AudioClip>("Sounds/Schwing");
             }
             hitObject.OnHit();
         }

@@ -109,6 +109,7 @@ public class Enemy : MonoBehaviour, IKillable
         yield return new WaitForSecondsRealtime(hitStunDuration);
         Time.timeScale = 1f;
         AudioSource deathsound = Instantiate(Resources.Load<AudioSource>("Prefabs/Death Sound"), transform.position, Quaternion.identity);
+        deathsound.GetComponent<DestroyAfterDelay>().delay = death.length;
         deathsound.clip = death;
         deathsound.pitch = Random.Range(0.5f, 1.5f);
         deathsound.Play();
