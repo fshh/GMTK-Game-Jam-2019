@@ -17,12 +17,13 @@ public class Enemy : MonoBehaviour, IKillable
     protected EnemyWeapon weapon;
 
     protected Rigidbody2D rb;
-    
+    protected Animator anim;
+
     /// <summary>
     /// Use for initializations.
     /// </summary>
-    protected virtual void Start()
-    {
+    protected virtual void Start() {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -79,7 +80,13 @@ public class Enemy : MonoBehaviour, IKillable
     protected virtual Vector3 GetDirection()
     {
         if (!Target) {
+            if (!this.GetType().IsSubclassOf(typeof(Enemy))) {
+                anim.SetBool("Walking", false);
+            }
             return Vector3.zero;
+        }
+        if (!this.GetType().IsSubclassOf(typeof(Enemy))) {
+            anim.SetBool("Walking", !Attacking);
         }
         return (Target.transform.position - transform.position).normalized;
     }

@@ -13,7 +13,6 @@ public class Jokester : Enemy
     /// </summary>
     [SerializeField] private float farDistFromPlayer = 10f;
 
-    private Animator anim;
     private float baseSpeed = 0;
     private bool retreating = false;
 

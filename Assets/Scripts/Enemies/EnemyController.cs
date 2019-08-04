@@ -82,7 +82,7 @@ public class EnemyController : MonoBehaviour
         Destroy(enemy.gameObject);
         if (!PlayerController.IsDead())
         {
-            GameObject.FindGameObjectWithTag("Score Board").GetComponent<ScoreBoard>().Score += 1;
+            GameObject.FindGameObjectWithTag("Score Board").GetComponent<ScoreBoard>().Score += 10;
         }
     }
 }

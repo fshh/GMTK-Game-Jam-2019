@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class ShielderWeapon : EnemyWeapon
 {
-    [SerializeField] private float maxWidth;
+    [SerializeField] private float hitboxStartTime;
+    [SerializeField] private float hitboxEndTime;
 
-    private Vector3 initialPosition;
+    private Collider2D hitbox;
 
     // This is a bit of a hack to put the weapon at the shield's position.
     private void Start()
     {
-        initialPosition = transform.parent.GetChild(0).localPosition;
-        transform.localPosition = initialPosition;
+        GetComponent<Animator>().SetTrigger("Attack");
+        transform.localPosition = transform.parent.GetChild(0).localPosition;
+        hitbox = GetComponent<Collider2D>();
+        hitbox.enabled = false;
     }
 
     public override void MoveWeapon()
     {
-        transform.localScale = new Vector3(1, Mathf.Lerp(0, maxWidth, timeAlive / lifetime), 1);
-        transform.localPosition = new Vector2(0, initialPosition.y + (transform.localScale.y / 2));
+        hitbox.enabled = timeAlive > hitboxStartTime && timeAlive < hitboxEndTime;
     }
 }

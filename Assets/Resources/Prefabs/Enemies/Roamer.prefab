@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!95 &-8869006473220312380
+--- !u!95 &
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -154,6 +154,16 @@ PrefabInstance:
         type: 3}
       propertyPath: type
       value: RandomMover
+      objectReference: {fileID: 0}
+    - target: {fileID: 2376588860830062828, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600102994873073855, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1793591719360356231, guid: 3f849da6b970b2b4db33ef8e58e40021,
         type: 3}

@@ -21,8 +21,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate() {
         if (!PlayerController.IsDead()) {
-            rb.velocity = Vector2.Lerp(rb.velocity, new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * speed, acceleration);
-            anim.SetBool("Walking", rb.velocity.magnitude > 0f);
+            Vector2 movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            rb.velocity = Vector2.Lerp(rb.velocity, movement * speed, acceleration);
+            anim.SetBool("Walking", movement.magnitude > 0f);
         } else {
             anim.SetBool("Walking", false);
         }
