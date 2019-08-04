@@ -31,7 +31,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5482d210e59745049aa3889449fd950f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: Roamer
+  type: 1
   speed: 4
   deathShake: 0.2
   hitStunDuration: 0.1
@@ -119,10 +119,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6364744695164318921, guid: 3f849da6b970b2b4db33ef8e58e40021,
+    - target: {fileID: 1322189113256095673, guid: 3f849da6b970b2b4db33ef8e58e40021,
         type: 3}
-      propertyPath: type
-      value: RandomMover
+      propertyPath: m_Size.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322189113256095673, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
         type: 3}
@@ -145,15 +150,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -9080338791031898633, guid: 70093c1b86860914c8711eaa0a9d7aa1,
         type: 3}
-    - target: {fileID: 1322189113256095673, guid: 3f849da6b970b2b4db33ef8e58e40021,
+    - target: {fileID: 6364744695164318921, guid: 3f849da6b970b2b4db33ef8e58e40021,
         type: 3}
-      propertyPath: m_Size.x
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322189113256095673, guid: 3f849da6b970b2b4db33ef8e58e40021,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.4
+      propertyPath: type
+      value: RandomMover
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6364744695164318921, guid: 3f849da6b970b2b4db33ef8e58e40021, type: 3}

@@ -8,6 +8,7 @@ TagManager:
   - Enemy Spotlight
   - Spotlight Mask
   - Score Board
+  - Audio Listener
   - Spotlight Canvas
   layers:
   - Default

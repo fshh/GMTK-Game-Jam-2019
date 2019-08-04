@@ -8,7 +8,12 @@ public class PlayerController : MonoBehaviour, IKillable
     [SerializeField] [Range(0f, 1f)] protected float hitStunDuration = 1f;
     [SerializeField] [Range(0f, 1f)] protected float timeScale = 0.1f;
 
-    private static bool dead = false;
+    public static bool dead = false;
+
+    private void Start()
+    {
+        dead = false;
+    }
 
     public void OnHit()
     {

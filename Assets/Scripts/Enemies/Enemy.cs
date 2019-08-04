@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour, IKillable
 {
-    public string type = "Default";
+    [SerializeField] public EnemyType type = EnemyType.Seeker;
     [SerializeField] protected float speed = 4f;
     [SerializeField] [Range(0f, 1f)] protected float deathShake = 0.2f;
     [SerializeField] [Range(0f, 1f)] protected float hitStunDuration = 0.1f;

@@ -57,7 +57,7 @@ public class Boomer : Enemy
         {
             Debug.Log("Made " + collider + " go boom");
             Vector2 direction = (collider.transform.position - transform.position).normalized;
-            collider.attachedRigidbody.AddForce(direction * explosionForce, ForceMode2D.Impulse);
+            collider.attachedRigidbody?.AddForce(direction * explosionForce, ForceMode2D.Impulse);
             if (collider != GetComponent<Collider2D>())
             {
                 collider.GetComponent<IKillable>()?.OnHit();
