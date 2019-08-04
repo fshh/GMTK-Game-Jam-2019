@@ -32,6 +32,8 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         if (player != null && weapon != null) {
+            // Zoom camera in/out based on distance between player and weapon
+
             // Follow player and weapon
             targetPoint = weapon.position + (player.position - weapon.position) * playerPriority;
             targetPoint.z = transform.position.z;
