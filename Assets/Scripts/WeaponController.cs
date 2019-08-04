@@ -33,7 +33,10 @@ public class WeaponController : MonoBehaviour
         
         if (hitObject == null)
         {
-            AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("Sounds/ShieldHit" + Random.Range(1, 6)), transform.position);
+            AudioSource shieldhit = Instantiate(Resources.Load<AudioSource>("Prefabs/Death Sound"), transform.position, Quaternion.identity);
+            shieldhit.clip = Resources.Load<AudioClip>("Sounds/ShieldHit" + Random.Range(1, 6));
+            shieldhit.GetComponent<DestroyAfterDelay>().delay = shieldhit.clip.length;
+            shieldhit.Play();
         }
 
         if (hitObject != null && Mathf.Max(rb.velocity.magnitude, rb.angularVelocity) > speedToKill)
