@@ -78,11 +78,12 @@ public class EnemyController : MonoBehaviour
     }
 
     public void RemoveEnemy(Enemy enemy) {
+        int points = (int)enemy.type;
         enemies.Remove(enemy);
         Destroy(enemy.gameObject);
         if (!PlayerController.IsDead())
         {
-            GameObject.FindGameObjectWithTag("Score Board").GetComponent<ScoreBoard>().Score += 10;
+            GameObject.FindGameObjectWithTag("Score Board").GetComponent<ScoreBoard>().Score += points;
         }
     }
 }

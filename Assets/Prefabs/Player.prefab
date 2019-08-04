@@ -179,7 +179,7 @@ MonoBehaviour:
   target: {fileID: 0}
   acceleration: 0.8
   drag: 0.5
-  angularDrag: 0.05
+  angularDrag: 0.2
 --- !u!82 &3417934165761932841
 AudioSource:
   m_ObjectHideFlags: 0
