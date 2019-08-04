@@ -316,6 +316,21 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 553201756}
+    - target: {fileID: 5191539868049699558, guid: 7af37b7b5914ed64e8595cbee0186626,
+        type: 3}
+      propertyPath: acceleration
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191539868049699558, guid: 7af37b7b5914ed64e8595cbee0186626,
+        type: 3}
+      propertyPath: drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191539869736281261, guid: 7af37b7b5914ed64e8595cbee0186626,
+        type: 3}
+      propertyPath: speed
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7af37b7b5914ed64e8595cbee0186626, type: 3}
 --- !u!1 &375319498
@@ -1220,39 +1235,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - enemyTypes:
-    - Boomer
-    duration: 10
-    totalNumberToSpawn: 8
-  - enemyTypes:
-    - Jokester
-    duration: 10
-    totalNumberToSpawn: 5
-  - enemyTypes:
-    - Roamer
-    - Jokester
-    duration: 20
-    totalNumberToSpawn: 15
-  - enemyTypes:
-    - Shielder
-    duration: 15
+  - spawnParams:
+    - type: 0
+      minSpawn: 5
+      maxSpawn: 7
+    spawnTime: 5
+    timeLimit: 30
+    totalNumberToSpawn: -1
+  - spawnParams:
+    - type: 3
+      minSpawn: 3
+      maxSpawn: 4
+    spawnTime: 10
+    timeLimit: 20
+    totalNumberToSpawn: -1
+  - spawnParams:
+    - type: 1
+      minSpawn: 4
+      maxSpawn: 4
+    - type: 0
+      minSpawn: 5
+      maxSpawn: 10
+    spawnTime: 10
+    timeLimit: 20
+    totalNumberToSpawn: 12
+  - spawnParams: []
+    spawnTime: 0
+    timeLimit: 0
     totalNumberToSpawn: 6
-  - enemyTypes:
-    - Roamer
-    - Shielder
-    duration: 15
+  - spawnParams: []
+    spawnTime: 0
+    timeLimit: 0
     totalNumberToSpawn: 6
-  - enemyTypes:
-    - Shielder
-    duration: 15
+  - spawnParams: []
+    spawnTime: 0
+    timeLimit: 0
     totalNumberToSpawn: 6
-  - enemyTypes:
-    - Shielder
-    duration: 15
+  - spawnParams: []
+    spawnTime: 0
+    timeLimit: 0
     totalNumberToSpawn: 6
-  - enemyTypes:
-    - Shielder
-    duration: 15
+  - spawnParams: []
+    spawnTime: 0
+    timeLimit: 0
     totalNumberToSpawn: 6
 --- !u!4 &1726193559
 Transform:

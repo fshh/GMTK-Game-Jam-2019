@@ -8,8 +8,10 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] private GameObject player;
 
+    public int EnemyCount => enemies.Count;
+
     private List<Enemy> enemies = new List<Enemy>();
-    private Dictionary<string, Enemy> enemyPrefabs;
+    private Dictionary<EnemyType, Enemy> enemyPrefabs;
     private GameObject[] spawns;
     private float timeFlashed = 0f;
     private SmoothFollowObject spotlight;
@@ -63,14 +65,14 @@ public class EnemyController : MonoBehaviour
         timeFlashed = seconds;
     }
 
-    public void SpawnEnemy(string name, int spawnIndex)
+    public void SpawnEnemy(EnemyType name, int spawnIndex)
     {
         Enemy e = GameObject.Instantiate(enemyPrefabs[name], spawns[spawnIndex].transform.position, Quaternion.identity);
         e.Target = player;
         enemies.Add(e);
     }
 
-    public void SpawnEnemy(string name) {
+    public void SpawnEnemy(EnemyType name) {
         int spawnIndex = Random.Range(0, spawns.Length);
         SpawnEnemy(name, spawnIndex);
     }

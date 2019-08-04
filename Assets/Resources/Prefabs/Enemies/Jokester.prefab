@@ -31,7 +31,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17bc02286d5c094f85daaa89c2159a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: Jokester
+  type: 3
   speed: 3
   deathShake: 0.2
   hitStunDuration: 0.1
@@ -128,32 +128,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -2226888902632969829, guid: 0a8c636b35649c04eaab24b995b6f1c5,
-        type: 3}
-    - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
-      objectReference: {fileID: 0}
     - target: {fileID: 2500199749413617112, guid: 3f849da6b970b2b4db33ef8e58e40021,
         type: 3}
       propertyPath: m_Name
@@ -213,6 +187,32 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2226888902632969829, guid: 0a8c636b35649c04eaab24b995b6f1c5,
+        type: 3}
+    - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6364744695164318921, guid: 3f849da6b970b2b4db33ef8e58e40021, type: 3}
