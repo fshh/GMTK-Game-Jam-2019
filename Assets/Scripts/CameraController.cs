@@ -10,6 +10,11 @@ public class CameraController : MonoBehaviour
     [SerializeField] [Range(0f,1f)] private float playerPriority = 0.8f;
     private Vector3 velocity = Vector3.zero;
     private Vector3 targetPoint = Vector3.zero;
+    private float maxX;
+    private float minX;
+    private float maxY;
+    private float minY;
+    private Camera cam;
 
     // Camera shake
     [SerializeField] Vector3 maximumTranslationShake = Vector3.one;
@@ -20,8 +25,16 @@ public class CameraController : MonoBehaviour
     private float trauma;
     private float seed;
 
-    private void Awake() {
+    private void Start() {
         seed = Random.value;
+        cam = GetComponent<Camera>();
+
+        float arenaRadius = GenerateArenaBoundary.Radius;
+        maxY = arenaRadius - cam.orthographicSize;
+        minY = -maxY;
+        maxX = maxY * cam.aspect;
+        minX = -maxX;
+        Debug.Log(maxX);
     }
 
     public void InduceStress(float stress) {
@@ -34,6 +47,8 @@ public class CameraController : MonoBehaviour
         if (player != null && weapon != null) {
             // Follow player and weapon
             targetPoint = weapon.position + (player.position - weapon.position) * playerPriority;
+            targetPoint.x = Mathf.Clamp(targetPoint.x, minX, maxX);
+            targetPoint.y = Mathf.Clamp(targetPoint.y, minY, maxY);
             targetPoint.z = transform.position.z;
             transform.position = Vector3.SmoothDamp(transform.position, targetPoint, ref velocity, 0.1f);
         } else {

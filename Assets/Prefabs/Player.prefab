@@ -177,9 +177,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  acceleration: 0.65
-  drag: 1
-  angularDrag: 0.5
+  acceleration: 0.8
+  drag: 0.5
+  angularDrag: 0.05
 --- !u!82 &3417934165761932841
 AudioSource:
   m_ObjectHideFlags: 0
