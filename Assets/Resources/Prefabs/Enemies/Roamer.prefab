@@ -34,6 +34,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 0
+  playerBloodSpray: {fileID: 0}
 --- !u!1001 &1095794304362923434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41,6 +42,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7659260597554680104, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -9080338791031898633, guid: 70093c1b86860914c8711eaa0a9d7aa1,
+        type: 3}
     - target: {fileID: 2500199749413617112, guid: 3f849da6b970b2b4db33ef8e58e40021,
         type: 3}
       propertyPath: m_Name
@@ -132,26 +139,31 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -9080338791031898633, guid: 70093c1b86860914c8711eaa0a9d7aa1,
         type: 3}
+    - target: {fileID: 2376588860830062828, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6364744695164318921, guid: 3f849da6b970b2b4db33ef8e58e40021,
         type: 3}
       propertyPath: type
       value: RandomMover
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986204849159443963, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 50c95ca5e95039d439ddeb02f4b64129, type: 2}
+    - target: {fileID: 2600102994873073855, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1793591719360356231, guid: 3f849da6b970b2b4db33ef8e58e40021,
         type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 01219397ed0c65443839575f21d72fd1, type: 3}
-    - target: {fileID: 2376588860830062828, guid: 3f849da6b970b2b4db33ef8e58e40021,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2600102994873073855, guid: 3f849da6b970b2b4db33ef8e58e40021,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6364744695164318921, guid: 3f849da6b970b2b4db33ef8e58e40021, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3f849da6b970b2b4db33ef8e58e40021, type: 3}
