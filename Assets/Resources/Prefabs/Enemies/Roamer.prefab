@@ -155,6 +155,11 @@ PrefabInstance:
       propertyPath: type
       value: RandomMover
       objectReference: {fileID: 0}
+    - target: {fileID: 1793591719360356231, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 01219397ed0c65443839575f21d72fd1, type: 3}
     m_RemovedComponents:
     - {fileID: 6364744695164318921, guid: 3f849da6b970b2b4db33ef8e58e40021, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3f849da6b970b2b4db33ef8e58e40021, type: 3}

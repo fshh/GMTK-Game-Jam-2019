@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour, IKillable
         Time.timeScale = timeScale;
         yield return new WaitForSecondsRealtime(hitStunDuration);
         Time.timeScale = 1f;
+        GameObject.FindGameObjectWithTag("Audio Listener").transform.parent = null;
         Destroy(this.gameObject);
     }
 

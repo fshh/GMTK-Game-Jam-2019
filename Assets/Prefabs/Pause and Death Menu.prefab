@@ -1627,3 +1627,5 @@ MonoBehaviour:
   deathMenu: {fileID: 5267789786780299839}
   scoreText: {fileID: 4282501893765579795}
   highscoreText: {fileID: 928221907404762843}
+  frequencyChangeTime: 0.3
+  frequencyChangeSteps: 100
