@@ -7,6 +7,8 @@ public class Boomer : Enemy
     [SerializeField] private float fuse = 1f;
     [SerializeField] private float explosionForce = 10;
     [SerializeField] private float explosionRadius;
+    [SerializeField] private GameObject explosion;
+    [SerializeField] private GameObject spotlight;
 
     private Animator anim;
     private bool attacking = false;
@@ -29,6 +31,9 @@ public class Boomer : Enemy
     public override void OnHit()
     {
         Attack();
+        CameraController cam = Camera.main.GetComponent<CameraController>();
+        cam.InduceStress(deathShake);
+        StartCoroutine(HitStun());
     }
 
     protected override void Attack()
@@ -39,7 +44,14 @@ public class Boomer : Enemy
 
     protected IEnumerator Explode()
     {
+        GetComponentInChildren<ParticleSystem>().Play();
+        GameObject light = Instantiate(spotlight, transform.position, Quaternion.identity, GameObject.FindGameObjectWithTag("Spotlight Canvas").transform);
+        light.transform.SetAsFirstSibling();
+
         yield return new WaitForSeconds(fuse);
+
+        GameObject splode = Instantiate(explosion, transform.position, Quaternion.identity);
+        Destroy(splode, splode.GetComponent<ParticleSystem>().main.duration);
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
         foreach (Collider2D collider in colliders)
         {
@@ -52,5 +64,11 @@ public class Boomer : Enemy
             }
         }
         base.OnHit();
+    }
+
+    private IEnumerator HitStun() {
+        Time.timeScale = 0.5f;
+        yield return new WaitForSecondsRealtime(hitStunDuration);
+        Time.timeScale = 1f;
     }
 }

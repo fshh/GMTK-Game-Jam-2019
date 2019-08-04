@@ -8,6 +8,7 @@ TagManager:
   - Enemy Spotlight
   - Spotlight Mask
   - Score Board
+  - Spotlight Canvas
   layers:
   - Default
   - TransparentFX
