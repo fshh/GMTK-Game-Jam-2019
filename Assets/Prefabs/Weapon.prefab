@@ -433,6 +433,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedToKill: 2
+  enemyBloodSpray: {fileID: 5339191149364044713, guid: ebd14c001226b824a8a6db4a63d6fa7f,
+    type: 3}
 --- !u!96 &1080438503
 TrailRenderer:
   serializedVersion: 2

@@ -10,7 +10,6 @@ public class Boomer : Enemy
     [SerializeField] private GameObject explosion;
     [SerializeField] private GameObject spotlight;
 
-    private Animator anim;
     private bool attacking = false;
     protected override bool Attacking => attacking;
 
@@ -51,7 +50,6 @@ public class Boomer : Enemy
         yield return new WaitForSeconds(fuse);
 
         GameObject splode = Instantiate(explosion, transform.position, Quaternion.identity);
-        Destroy(splode, splode.GetComponent<ParticleSystem>().main.duration);
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
         foreach (Collider2D collider in colliders)
         {
