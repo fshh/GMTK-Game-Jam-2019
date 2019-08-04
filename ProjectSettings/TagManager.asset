@@ -10,6 +10,7 @@ TagManager:
   - Score Board
   - Audio Listener
   - Spotlight Canvas
+  - Fade Panel
   layers:
   - Default
   - TransparentFX

@@ -190,12 +190,12 @@ PrefabInstance:
     - target: {fileID: 8945861466609294514, guid: e8f118ca0ed7e874aa747cbc600e935c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8945861466609294514, guid: e8f118ca0ed7e874aa747cbc600e935c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8945861466609294514, guid: e8f118ca0ed7e874aa747cbc600e935c,
         type: 3}
@@ -274,7 +274,7 @@ PrefabInstance:
     - target: {fileID: 5191539869736281258, guid: 7af37b7b5914ed64e8595cbee0186626,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 5191539869736281258, guid: 7af37b7b5914ed64e8595cbee0186626,
         type: 3}
@@ -389,12 +389,12 @@ PrefabInstance:
     - target: {fileID: 4565999550027049029, guid: f95f5bb472dd96d41b3ac4d6fabb5166,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4565999550027049029, guid: f95f5bb472dd96d41b3ac4d6fabb5166,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4565999550027049029, guid: f95f5bb472dd96d41b3ac4d6fabb5166,
         type: 3}
@@ -631,6 +631,131 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 780250218}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &987333707
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1126813024}
+    m_Modifications:
+    - target: {fileID: 8762473999596978814, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_Name
+      value: FadePanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 47c0891e1a52da3498e2b96791dae56c, type: 3}
+--- !u!224 &987333708 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8762473999596978813, guid: 47c0891e1a52da3498e2b96791dae56c,
+    type: 3}
+  m_PrefabInstance: {fileID: 987333707}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1041096278 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7457919634298762453, guid: 527d4fd56f12b394ba0e9c35f32c2a2d,
@@ -669,6 +794,7 @@ RectTransform:
   m_Children:
   - {fileID: 1594561953}
   - {fileID: 1521487958}
+  - {fileID: 987333708}
   m_Father: {fileID: 1607663054}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1451,24 +1577,205 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - spawnParams:
-    - type: 0
-      minSpawn: 1
-      maxSpawn: 1
-    - type: 1
-      minSpawn: 1
-      maxSpawn: 1
-    - type: 2
-      minSpawn: 1
-      maxSpawn: 1
-    - type: 3
-      minSpawn: 1
-      maxSpawn: 1
-    - type: 4
-      minSpawn: 1
-      maxSpawn: 1
-    spawnTime: 2
+    - type: 5
+      minSpawn: 4
+      maxSpawn: 4
+    spawnTime: 8
+    timeLimit: 30
+    totalNumberToSpawn: 4
+  - spawnParams:
+    - type: 15
+      minSpawn: 6
+      maxSpawn: 6
+    spawnTime: 15
+    timeLimit: 30
+    totalNumberToSpawn: 6
+  - spawnParams:
+    - type: 5
+      minSpawn: 4
+      maxSpawn: 6
+    - type: 15
+      minSpawn: 3
+      maxSpawn: 6
+    spawnTime: 12
+    timeLimit: 30
+    totalNumberToSpawn: 8
+  - spawnParams:
+    - type: 10
+      minSpawn: 10
+      maxSpawn: 10
+    spawnTime: 10
+    timeLimit: 30
+    totalNumberToSpawn: 10
+  - spawnParams:
+    - type: 5
+      minSpawn: 5
+      maxSpawn: 10
+    - type: 10
+      minSpawn: 5
+      maxSpawn: 10
+    spawnTime: 20
     timeLimit: 30
     totalNumberToSpawn: 15
+  - spawnParams:
+    - type: 10
+      minSpawn: 3
+      maxSpawn: 6
+    - type: 15
+      minSpawn: 2
+      maxSpawn: 4
+    spawnTime: 15
+    timeLimit: 30
+    totalNumberToSpawn: 10
+  - spawnParams:
+    - type: 20
+      minSpawn: 3
+      maxSpawn: 6
+    spawnTime: 10
+    timeLimit: 30
+    totalNumberToSpawn: -1
+  - spawnParams:
+    - type: 5
+      minSpawn: 4
+      maxSpawn: 8
+    - type: 10
+      minSpawn: 4
+      maxSpawn: 8
+    - type: 20
+      minSpawn: 2
+      maxSpawn: 4
+    spawnTime: 20
+    timeLimit: 40
+    totalNumberToSpawn: -1
+  - spawnParams:
+    - type: 15
+      minSpawn: 3
+      maxSpawn: 6
+    - type: 10
+      minSpawn: 4
+      maxSpawn: 8
+    - type: 20
+      minSpawn: 2
+      maxSpawn: 4
+    spawnTime: 20
+    timeLimit: 40
+    totalNumberToSpawn: -1
+  - spawnParams:
+    - type: 5
+      minSpawn: 5
+      maxSpawn: 10
+    - type: 15
+      minSpawn: 2
+      maxSpawn: 4
+    - type: 10
+      minSpawn: 3
+      maxSpawn: 6
+    - type: 20
+      minSpawn: 2
+      maxSpawn: 4
+    spawnTime: 20
+    timeLimit: 40
+    totalNumberToSpawn: -1
+  - spawnParams:
+    - type: 25
+      minSpawn: 2
+      maxSpawn: 4
+    spawnTime: 10
+    timeLimit: 30
+    totalNumberToSpawn: -1
+  - spawnParams:
+    - type: 10
+      minSpawn: 5
+      maxSpawn: 10
+    - type: 25
+      minSpawn: 2
+      maxSpawn: 4
+    spawnTime: 15
+    timeLimit: 30
+    totalNumberToSpawn: -1
+  - spawnParams:
+    - type: 5
+      minSpawn: 5
+      maxSpawn: 10
+    - type: 15
+      minSpawn: 3
+      maxSpawn: 6
+    - type: 10
+      minSpawn: 4
+      maxSpawn: 8
+    - type: 25
+      minSpawn: 1
+      maxSpawn: 2
+    spawnTime: 22
+    timeLimit: 40
+    totalNumberToSpawn: -1
+  - spawnParams:
+    - type: 5
+      minSpawn: 5
+      maxSpawn: 10
+    - type: 15
+      minSpawn: 2
+      maxSpawn: 4
+    - type: 10
+      minSpawn: 3
+      maxSpawn: 6
+    - type: 20
+      minSpawn: 2
+      maxSpawn: 4
+    - type: 25
+      minSpawn: 1
+      maxSpawn: 2
+    spawnTime: 25
+    timeLimit: 45
+    totalNumberToSpawn: -1
+  - spawnParams:
+    - type: 5
+      minSpawn: 4
+      maxSpawn: 8
+    - type: 15
+      minSpawn: 3
+      maxSpawn: 6
+    - type: 10
+      minSpawn: 5
+      maxSpawn: 10
+    - type: 20
+      minSpawn: 2
+      maxSpawn: 4
+    - type: 25
+      minSpawn: 2
+      maxSpawn: 4
+    spawnTime: 25
+    timeLimit: 45
+    totalNumberToSpawn: -1
+  - spawnParams:
+    - type: 25
+      minSpawn: 3
+      maxSpawn: 6
+    - type: 15
+      minSpawn: 4
+      maxSpawn: 8
+    - type: 10
+      minSpawn: 5
+      maxSpawn: 10
+    - type: 20
+      minSpawn: 3
+      maxSpawn: 6
+    spawnTime: 25
+    timeLimit: 45
+    totalNumberToSpawn: -1
+  - spawnParams:
+    - type: 15
+      minSpawn: 5
+      maxSpawn: 10
+    - type: 20
+      minSpawn: 4
+      maxSpawn: 8
+    - type: 25
+      minSpawn: 3
+      maxSpawn: 6
+    spawnTime: 20
+    timeLimit: 40
+    totalNumberToSpawn: -1
 --- !u!4 &1726193559
 Transform:
   m_ObjectHideFlags: 0
@@ -2511,7 +2818,7 @@ PrefabInstance:
     - target: {fileID: 8945861466609294514, guid: e8f118ca0ed7e874aa747cbc600e935c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8945861466609294514, guid: e8f118ca0ed7e874aa747cbc600e935c,
         type: 3}

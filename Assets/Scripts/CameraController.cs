@@ -34,7 +34,6 @@ public class CameraController : MonoBehaviour
         minY = -maxY;
         maxX = maxY * cam.aspect;
         minX = -maxX;
-        Debug.Log(maxX);
     }
 
     public void InduceStress(float stress) {
