@@ -45,6 +45,10 @@ MonoBehaviour:
     type: 3}
   spotlight: {fileID: 7455885754550543335, guid: 73c32be665404334fa9b3ba9ed82aa93,
     type: 3}
+  enemyBloodSpray: {fileID: 5339191149364044713, guid: ebd14c001226b824a8a6db4a63d6fa7f,
+    type: 3}
+  playerBloodSpray: {fileID: 5339191149364044713, guid: c48975d3a5015e74eb5083d857cec9a7,
+    type: 3}
 --- !u!1 &4636572042599488950
 GameObject:
   m_ObjectHideFlags: 0
@@ -4805,6 +4809,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7888392007058388830, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3968217808028020500, guid: f246e5896c1dd7a48a10137590f8e5f1,
+        type: 3}
     - target: {fileID: 2500199749413617112, guid: 3f849da6b970b2b4db33ef8e58e40021,
         type: 3}
       propertyPath: m_Name
@@ -4885,6 +4895,16 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1322189113256095673, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322189113256095673, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -729864463117620198, guid: 3f849da6b970b2b4db33ef8e58e40021,
         type: 3}
       propertyPath: m_Color.r
@@ -4906,11 +4926,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -3968217808028020500, guid: f246e5896c1dd7a48a10137590f8e5f1,
         type: 3}
-    - target: {fileID: 1793591719360356231, guid: 3f849da6b970b2b4db33ef8e58e40021,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 418768c5fb7d3f846b03a89f9ce90356, type: 3}
     - target: {fileID: 6167073374489384910, guid: 3f849da6b970b2b4db33ef8e58e40021,
         type: 3}
       propertyPath: m_RootOrder
@@ -4925,6 +4940,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793591719360356231, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 418768c5fb7d3f846b03a89f9ce90356, type: 3}
+    - target: {fileID: 6167073374489384910, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6364744695164318921, guid: 3f849da6b970b2b4db33ef8e58e40021, type: 3}

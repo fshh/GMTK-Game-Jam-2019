@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 0.5
+  playerBloodSpray: {fileID: 5339191149364044713, guid: c48975d3a5015e74eb5083d857cec9a7,
+    type: 3}
   hitboxStartTime: 0.3
   hitboxEndTime: 0.5
 --- !u!61 &4633422036871840984

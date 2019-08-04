@@ -1231,9 +1231,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - spawnParams:
+    - type: 0
+      minSpawn: 1
+      maxSpawn: 1
+    - type: 1
+      minSpawn: 1
+      maxSpawn: 1
+    - type: 2
+      minSpawn: 1
+      maxSpawn: 1
+    - type: 3
+      minSpawn: 1
+      maxSpawn: 1
     - type: 4
-      minSpawn: 3
-      maxSpawn: 5
+      minSpawn: 1
+      maxSpawn: 1
     spawnTime: 2
     timeLimit: 30
     totalNumberToSpawn: 15

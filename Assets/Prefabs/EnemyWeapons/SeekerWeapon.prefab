@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 0.5
-  startingRot: 40
-  endingRot: -40
+  playerBloodSpray: {fileID: 5339191149364044713, guid: c48975d3a5015e74eb5083d857cec9a7,
+    type: 3}
   hitboxStartTime: 0.2
   hitboxEndTime: 0.4
 --- !u!60 &1023842518299485514

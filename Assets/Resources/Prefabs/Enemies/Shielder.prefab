@@ -220,11 +220,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1413899727343140995, guid: ca3be0c9b4b358348b5b833a4eaade2a,
         type: 3}
-    - target: {fileID: 1793591719360356231, guid: 3f849da6b970b2b4db33ef8e58e40021,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 310db298b8484674e8837bcda363c186, type: 3}
     - target: {fileID: 6167073374489384910, guid: 3f849da6b970b2b4db33ef8e58e40021,
         type: 3}
       propertyPath: m_RootOrder
@@ -246,8 +241,13 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6364744695164318921, guid: 3f849da6b970b2b4db33ef8e58e40021, type: 3}
+    - target: {fileID: 1793591719360356231, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 310db298b8484674e8837bcda363c186, type: 3}
+    m_RemovedComponents: [{fileID: 6364744695164318921, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}]
   m_SourcePrefab: {fileID: 100100000, guid: 3f849da6b970b2b4db33ef8e58e40021, type: 3}
 --- !u!1 &2873337450327186223 stripped
 GameObject:
