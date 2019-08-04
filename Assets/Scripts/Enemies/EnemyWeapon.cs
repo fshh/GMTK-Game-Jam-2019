@@ -10,7 +10,7 @@ public class EnemyWeapon : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && !PlayerController.IsDead())
         {
             Vector2 dir = ((collision.transform.position - transform.root.position) + transform.root.up).normalized;
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;

@@ -25,7 +25,8 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector2.Lerp(rb.velocity, movement * speed, acceleration);
             anim.SetBool("Walking", movement.magnitude > 0f);
         } else {
-            anim.SetBool("Walking", false);
+            rb.rotation = 0f;
+            anim.SetTrigger("Die");
         }
     }
 }

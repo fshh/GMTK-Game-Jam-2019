@@ -19,6 +19,14 @@ public class PlayerController : MonoBehaviour, IKillable
     {
         if (!dead) {
             dead = true;
+            transform.Find("Magnet").GetComponent<SpriteRenderer>().enabled = false;
+            Transform head = transform.Find("Head");
+            head.parent = null;
+            Rigidbody2D headRB = head.gameObject.AddComponent<Rigidbody2D>();
+            headRB.gravityScale = 0f;
+            headRB.drag = 1f;
+            headRB.velocity = GetComponent<Rigidbody2D>().velocity * 2f;
+
             CameraController cam = Camera.main.GetComponent<CameraController>();
             cam.InduceStress(cameraStress);
             AudioSource deathsound = Instantiate(Resources.Load<AudioSource>("Prefabs/Death Sound"), transform.position, Quaternion.identity);
@@ -33,7 +41,7 @@ public class PlayerController : MonoBehaviour, IKillable
         yield return new WaitForSecondsRealtime(hitStunDuration);
         Time.timeScale = 1f;
         GameObject.FindGameObjectWithTag("Audio Listener").transform.parent = null;
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
     }
 
     public static bool IsDead() {
