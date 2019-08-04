@@ -121,5 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 0.3
+  playerBloodSpray: {fileID: 5339191149364044713, guid: c48975d3a5015e74eb5083d857cec9a7,
+    type: 3}
   minRange: 0.2
   maxRange: 0.7

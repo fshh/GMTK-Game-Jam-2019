@@ -6,6 +6,7 @@ public class WeaponController : MonoBehaviour
 {
     [SerializeField] protected float speedToKill;
     [SerializeField] protected GameObject enemyBloodSpray;
+    [SerializeField] protected GameObject playerBloodSpray;
 
     protected Rigidbody2D rb;
 
@@ -30,14 +31,18 @@ public class WeaponController : MonoBehaviour
         if (hitObject != null && Mathf.Max(rb.velocity.magnitude, rb.angularVelocity) > speedToKill)
         {
             if (hitObject.GetType() == typeof(Enemy) || hitObject.GetType().IsSubclassOf(typeof(Enemy))) {
-                Debug.Log("hit enemy");
-                //Vector2 dir = (collider.transform.position - transform.position).normalized;
-                Vector2 dir = ((Vector2)(collider.transform.position - transform.position) + rb.velocity).normalized;
-                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                Quaternion rotation = Quaternion.AngleAxis(angle - 90f, Vector3.forward);
-                Instantiate(enemyBloodSpray, collider.transform.position, rotation);
+                SprayBlood(collider, enemyBloodSpray);
+            } else if (collider.tag == "Player") {
+                SprayBlood(collider, playerBloodSpray);
             }
             hitObject.OnHit();
         }
+    }
+
+    private void SprayBlood(Collider2D collider, GameObject sprayPrefab) {
+        Vector2 dir = ((Vector2)(collider.transform.position - transform.position) + rb.velocity).normalized;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.AngleAxis(angle - 90f, Vector3.forward);
+        Instantiate(sprayPrefab, collider.transform.position, rotation);
     }
 }

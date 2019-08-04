@@ -9,6 +9,8 @@ public class Boomer : Enemy
     [SerializeField] private float explosionRadius;
     [SerializeField] private GameObject explosion;
     [SerializeField] private GameObject spotlight;
+    [SerializeField] protected GameObject enemyBloodSpray;
+    [SerializeField] protected GameObject playerBloodSpray;
 
     private bool attacking = false;
     protected override bool Attacking => attacking;
@@ -49,7 +51,7 @@ public class Boomer : Enemy
 
         yield return new WaitForSeconds(fuse);
 
-        GameObject splode = Instantiate(explosion, transform.position, Quaternion.identity);
+        Instantiate(explosion, transform.position, Quaternion.identity);
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
         foreach (Collider2D collider in colliders)
         {
@@ -58,6 +60,11 @@ public class Boomer : Enemy
             collider.attachedRigidbody?.AddForce(direction * explosionForce, ForceMode2D.Impulse);
             if (collider != GetComponent<Collider2D>())
             {
+                GameObject bloodPrefab = collider.tag == "Player" ? playerBloodSpray : enemyBloodSpray;
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                Quaternion rotation = Quaternion.AngleAxis(angle - 90f, Vector3.forward);
+                Instantiate(bloodPrefab, collider.transform.position, rotation);
+
                 collider.GetComponent<IKillable>()?.OnHit();
             }
         }

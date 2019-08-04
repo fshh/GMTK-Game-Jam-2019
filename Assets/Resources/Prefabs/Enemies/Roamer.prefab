@@ -52,6 +52,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 0
+  playerBloodSpray: {fileID: 5339191149364044713, guid: c48975d3a5015e74eb5083d857cec9a7,
+    type: 3}
 --- !u!1001 &1095794304362923434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -150,15 +152,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -9080338791031898633, guid: 70093c1b86860914c8711eaa0a9d7aa1,
         type: 3}
-    - target: {fileID: 6364744695164318921, guid: 3f849da6b970b2b4db33ef8e58e40021,
-        type: 3}
-      propertyPath: type
-      value: RandomMover
-      objectReference: {fileID: 0}
     - target: {fileID: 2376588860830062828, guid: 3f849da6b970b2b4db33ef8e58e40021,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364744695164318921, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: type
+      value: RandomMover
       objectReference: {fileID: 0}
     - target: {fileID: 2600102994873073855, guid: 3f849da6b970b2b4db33ef8e58e40021,
         type: 3}
