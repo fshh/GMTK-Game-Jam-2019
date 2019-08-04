@@ -36,7 +36,11 @@ public class WeaponController : MonoBehaviour
             audio.clip = Resources.Load<AudioClip>("Sounds/Hit" + Random.Range(1, 9));
             audio.Play();
         }
-        else if (!(hitObject is PlayerController))
+        else if (hitObject is PlayerController)
+        {
+            audio.clip = Resources.Load<AudioClip>("Sounds/Schwing");
+        }
+        else
         {
             AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("Sounds/ShieldHit" + Random.Range(1, 6)), transform.position);
         }

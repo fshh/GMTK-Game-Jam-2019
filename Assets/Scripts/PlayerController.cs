@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour, IKillable
             dead = true;
             CameraController cam = Camera.main.GetComponent<CameraController>();
             cam.InduceStress(cameraStress);
+            AudioSource deathsound = Instantiate(Resources.Load<AudioSource>("Prefabs/Death Sound"), transform.position, Quaternion.identity);
+            deathsound.GetComponent<DestroyAfterDelay>().delay = deathsound.clip.length;
+            deathsound.Play();
             StartCoroutine(HitStun());
         }
     }
