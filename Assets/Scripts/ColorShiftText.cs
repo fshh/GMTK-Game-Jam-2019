@@ -7,6 +7,7 @@ public class ColorShiftText : MonoBehaviour
 {
     [SerializeField] private List<Color> colors;
     [SerializeField] private float shiftTime;
+    public float alpha = 1f;
 
     private Text text;
     private int currentColorIndex = 0;
@@ -30,6 +31,8 @@ public class ColorShiftText : MonoBehaviour
             nextColorIndex = nextColorIndex + 1 >= colors.Count ? 0 : nextColorIndex + 1;
         }
 
-        text.color = Color.Lerp(colors[currentColorIndex], colors[nextColorIndex], timeElapsed / shiftTime);
+        Color color = Color.Lerp(colors[currentColorIndex], colors[nextColorIndex], timeElapsed / shiftTime);
+        color.a = alpha;
+        text.color = color;
     }
 }
