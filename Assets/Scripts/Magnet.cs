@@ -18,8 +18,7 @@ public class Magnet : MonoBehaviour
         particles.Stop();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (!PlayerController.IsDead()) {
             if (Input.GetMouseButton(0)) {

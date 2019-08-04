@@ -61,7 +61,11 @@ public class LevelController : MonoBehaviour
             if (levelTimeElapsed >= levels[currentLevel].timeLimit 
                     || (enemyController.EnemyCount < 1 && levelTimeElapsed > levels[currentLevel].spawnTime))
             {
-                currentLevel++;
+                // TEMP: Repeat last level
+                if (currentLevel < levels.Count - 1)
+                {
+                    currentLevel++;
+                }
                 levelTimeElapsed = 0f;
                 spawnTimeElapsed = 0f;
                 CreateLevelSpawns();

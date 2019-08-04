@@ -107,6 +107,13 @@ public class Enemy : MonoBehaviour, IKillable
         Time.timeScale = 0.5f;
         yield return new WaitForSecondsRealtime(hitStunDuration);
         Time.timeScale = 1f;
+        AudioSource deathsound = GetComponent<AudioSource>();
+        deathsound.pitch = Random.Range(0.5f, 1.5f);
+        deathsound.Play();
+        while (deathsound.isPlaying)
+        {
+            yield return null;
+        }
         FindObjectOfType<EnemyController>().RemoveEnemy(this);
     }
 }

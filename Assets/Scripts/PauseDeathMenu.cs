@@ -10,9 +10,20 @@ public class PauseDeathMenu : MonoBehaviour
     [SerializeField] private GameObject deathMenu;
     [SerializeField] private Text scoreText;
     [SerializeField] private Text highscoreText;
+    [SerializeField] private float frequencyChangeTime = 0.5f;
+    [SerializeField] private int frequencyChangeSteps = 100;
+
+    private bool lower = true;
+    private const float LOW_FREQ = 1000;
+    private const float HIGH_FREQ = 22000;
 
     void Update()
     {
+        if (Time.timeScale <= 0)
+        {
+            return;
+        }
+
         if (PlayerController.IsDead() && !deathMenu.activeInHierarchy)
         {
             deathMenu.SetActive(true);
@@ -26,6 +37,8 @@ public class PauseDeathMenu : MonoBehaviour
         {
             pauseMenu.SetActive(true);
             Time.timeScale = 0f;
+            lower = true;
+            StartCoroutine("ChangeFrequencies");
             StartCoroutine("CheckForUnpause");
         }
     }
@@ -55,5 +68,23 @@ public class PauseDeathMenu : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+
+    private IEnumerator ChangeFrequencies()
+    {
+        AudioLowPassFilter filter = GameObject.FindGameObjectWithTag("Audio Listener").GetComponent<AudioLowPassFilter>();
+        filter.enabled = true;
+        float fromFreq = (lower) ? HIGH_FREQ : LOW_FREQ;
+        float toFreq = (lower) ? LOW_FREQ : HIGH_FREQ;
+        filter.cutoffFrequency = fromFreq;
+        for (float time = 0; time <= frequencyChangeTime; time += frequencyChangeTime / frequencyChangeSteps)
+        {
+            filter.cutoffFrequency = Mathf.Lerp(fromFreq, toFreq, time / frequencyChangeTime);
+            yield return new WaitForSecondsRealtime(frequencyChangeTime / frequencyChangeSteps);
+        }
+        if (!lower)
+        {
+            filter.enabled = false;
+        }
     }
 }
