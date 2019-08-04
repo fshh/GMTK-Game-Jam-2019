@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -8,6 +9,8 @@ public class PauseDeathMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject deathMenu;
+    [SerializeField] private GameObject volumePanel;
+    [SerializeField] private AudioMixer mixer;
     [SerializeField] private Text scoreText;
     [SerializeField] private Text highscoreText;
     [SerializeField] private float frequencyChangeTime = 0.5f;
@@ -51,23 +54,14 @@ public class PauseDeathMenu : MonoBehaviour
             if (Input.GetButtonDown("Pause"))
             {
                 pauseMenu.SetActive(false);
+                volumePanel.SetActive(false);
                 Time.timeScale = 1f;
+                lower = false;
+                StartCoroutine("ChangeFrequencies");
                 yield break;
             }
             yield return null;
         }
-    }
-
-    public void Restart()
-    {
-        Time.timeScale = 1f;
-        // Make sure this is the correct scene
-        SceneManager.LoadScene(1);
-    }
-
-    public void Exit()
-    {
-        Application.Quit();
     }
 
     private IEnumerator ChangeFrequencies()
@@ -86,5 +80,37 @@ public class PauseDeathMenu : MonoBehaviour
         {
             filter.enabled = false;
         }
+    }
+
+    public void Restart()
+    {
+        Time.timeScale = 1f;
+        // Make sure this is the correct scene
+        SceneManager.LoadScene(1);
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
+    public void VolumePanel(bool open)
+    {
+        volumePanel.SetActive(open);
+    }
+
+    public void SetMaster(float volume)
+    {
+        mixer.SetFloat("Master", volume);
+    }
+
+    public void SetMusic(float volume)
+    {
+        mixer.SetFloat("Music", volume);
+    }
+
+    public void SetFX(float volume)
+    {
+        mixer.SetFloat("FX", volume);
     }
 }
