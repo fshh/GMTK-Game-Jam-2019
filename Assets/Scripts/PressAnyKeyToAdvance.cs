@@ -30,7 +30,7 @@ public class PressAnyKeyToAdvance : MonoBehaviour
             yield return null;
         }
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("AndrewScene");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneToLoad);
 
         // Wait until the asynchronous scene fully loads
         while (!asyncLoad.isDone) {
