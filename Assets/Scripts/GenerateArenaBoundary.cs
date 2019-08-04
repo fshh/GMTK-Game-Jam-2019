@@ -7,11 +7,11 @@ public class GenerateArenaBoundary : MonoBehaviour
     [SerializeField] private int numberOfEdges;
     [SerializeField] private float radius;
 
-    [HideInInspector] public static float width;
+    [HideInInspector] public static float Radius;
 
     // Use this for initialization
-    void Start() {
-        width = radius;
+    void Awake() {
+        Radius = radius;
 
         EdgeCollider2D edgeCollider = GetComponent<EdgeCollider2D>();
         Vector2[] points = new Vector2[numberOfEdges + 1];

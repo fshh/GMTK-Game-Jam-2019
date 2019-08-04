@@ -34,7 +34,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 0
-  playerBloodSpray: {fileID: 0}
+  playerBloodSpray: {fileID: 5339191149364044713, guid: c48975d3a5015e74eb5083d857cec9a7,
+    type: 3}
 --- !u!1001 &1095794304362923434
 PrefabInstance:
   m_ObjectHideFlags: 0
