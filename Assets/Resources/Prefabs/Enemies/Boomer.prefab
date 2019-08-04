@@ -37,6 +37,7 @@ MonoBehaviour:
   hitStunDuration: 0.1
   attackDistance: 3
   weaponPrefab: {fileID: 0}
+  death: {fileID: 8300000, guid: ea2133899fc486643b24d3a11a29e98e, type: 3}
   fuse: 1
   explosionForce: 10
   explosionRadius: 3
@@ -4905,10 +4906,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -3968217808028020500, guid: f246e5896c1dd7a48a10137590f8e5f1,
         type: 3}
+    - target: {fileID: 1793591719360356231, guid: 3f849da6b970b2b4db33ef8e58e40021,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 418768c5fb7d3f846b03a89f9ce90356, type: 3}
     - target: {fileID: 6167073374489384910, guid: 3f849da6b970b2b4db33ef8e58e40021,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2376588860830062828, guid: 3f849da6b970b2b4db33ef8e58e40021,
         type: 3}
@@ -4920,11 +4926,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1793591719360356231, guid: 3f849da6b970b2b4db33ef8e58e40021,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 418768c5fb7d3f846b03a89f9ce90356, type: 3}
     m_RemovedComponents:
     - {fileID: 6364744695164318921, guid: 3f849da6b970b2b4db33ef8e58e40021, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3f849da6b970b2b4db33ef8e58e40021, type: 3}

@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour, IKillable
     [SerializeField] [Range(0f, 1f)] protected float hitStunDuration = 0.1f;
     [SerializeField] protected float attackDistance = 1f;
     [SerializeField] protected EnemyWeapon weaponPrefab;
+    [SerializeField] protected AudioClip death;
 
     public GameObject Target { get; set; }
     public bool Visible => GetComponent<SpriteRenderer>().enabled;
@@ -107,13 +108,10 @@ public class Enemy : MonoBehaviour, IKillable
         Time.timeScale = 0.5f;
         yield return new WaitForSecondsRealtime(hitStunDuration);
         Time.timeScale = 1f;
-        AudioSource deathsound = GetComponent<AudioSource>();
+        AudioSource deathsound = Instantiate(Resources.Load<AudioSource>("Prefabs/Death Sound"), transform.position, Quaternion.identity);
+        deathsound.clip = death;
         deathsound.pitch = Random.Range(0.5f, 1.5f);
         deathsound.Play();
-        while (deathsound.isPlaying)
-        {
-            yield return null;
-        }
         FindObjectOfType<EnemyController>().RemoveEnemy(this);
     }
 }
