@@ -304,7 +304,7 @@ PrefabInstance:
     - target: {fileID: 5191539869736281258, guid: 7af37b7b5914ed64e8595cbee0186626,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5191539869736281258, guid: 7af37b7b5914ed64e8595cbee0186626,
         type: 3}
@@ -326,21 +326,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 553201756}
-    - target: {fileID: 5191539868049699558, guid: 7af37b7b5914ed64e8595cbee0186626,
-        type: 3}
-      propertyPath: acceleration
-      value: 0.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 5191539868049699558, guid: 7af37b7b5914ed64e8595cbee0186626,
-        type: 3}
-      propertyPath: drag
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5191539869736281261, guid: 7af37b7b5914ed64e8595cbee0186626,
-        type: 3}
-      propertyPath: speed
-      value: 7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7af37b7b5914ed64e8595cbee0186626, type: 3}
 --- !u!1 &375319498
@@ -1191,7 +1176,7 @@ PrefabInstance:
     - target: {fileID: 5264540041661767098, guid: 0081365e78d47e74ca648806320cfaa9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5264540041661767098, guid: 0081365e78d47e74ca648806320cfaa9,
         type: 3}
@@ -1246,49 +1231,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - spawnParams:
-    - type: 0
-      minSpawn: 5
-      maxSpawn: 7
-    spawnTime: 5
+    - type: 2
+      minSpawn: 1
+      maxSpawn: 1
+    spawnTime: 2
     timeLimit: 30
-    totalNumberToSpawn: -1
-  - spawnParams:
-    - type: 3
-      minSpawn: 3
-      maxSpawn: 4
-    spawnTime: 10
-    timeLimit: 20
-    totalNumberToSpawn: -1
-  - spawnParams:
-    - type: 1
-      minSpawn: 4
-      maxSpawn: 4
-    - type: 0
-      minSpawn: 5
-      maxSpawn: 10
-    spawnTime: 10
-    timeLimit: 20
-    totalNumberToSpawn: 12
-  - spawnParams: []
-    spawnTime: 0
-    timeLimit: 0
-    totalNumberToSpawn: 6
-  - spawnParams: []
-    spawnTime: 0
-    timeLimit: 0
-    totalNumberToSpawn: 6
-  - spawnParams: []
-    spawnTime: 0
-    timeLimit: 0
-    totalNumberToSpawn: 6
-  - spawnParams: []
-    spawnTime: 0
-    timeLimit: 0
-    totalNumberToSpawn: 6
-  - spawnParams: []
-    spawnTime: 0
-    timeLimit: 0
-    totalNumberToSpawn: 6
+    totalNumberToSpawn: 15
 --- !u!4 &1726193559
 Transform:
   m_ObjectHideFlags: 0
@@ -1301,7 +1249,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1763388899
 GameObject:
@@ -1367,7 +1315,7 @@ Transform:
   - {fileID: 1667654611}
   - {fileID: 2027151741}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1790088184
 GameObject:
@@ -1459,8 +1407,8 @@ MonoBehaviour:
   player: {fileID: 494727105}
   weapon: {fileID: 553201758}
   playerPriority: 0.8
-  maximumTranslationShake: {x: 1, y: 1, z: 0}
-  maximumAngularShake: {x: 0, y: 0, z: 15}
+  maximumTranslationShake: {x: 0.7, y: 0.7, z: 0}
+  maximumAngularShake: {x: 0, y: 0, z: 10}
   frequency: 25
   traumaExponent: 1
   recoverySpeed: 1
